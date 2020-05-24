@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/raise
+    username: root
+    password: root
+
+logging:
+  level:
+    com.national: debug
+    org.springframework: info
+
+# 映射端口
+server:
+  port: 80
+
+#mybatis:
+#  # 实体类别名包路径
+#  type-aliases-package: com.national.raise.web.pojo
+#  # 映射文件路径
+#  # mapper-locations: classpath:mappers/*.xml
+#  configuration:
+#    #控制台输出执行sql
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#
+
+

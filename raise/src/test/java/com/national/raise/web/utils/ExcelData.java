@@ -1,10 +1,11 @@
-package com.national.raise.web.Test;
+package com.national.raise.web.utils;
 
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.File;
 import java.io.FileInputStream;
 
 /**
@@ -22,6 +23,7 @@ public class ExcelData {
     ExcelData(String filePath, String sheetName) {
         FileInputStream fileInputStream = null;
         try {
+            System.out.println(new File(".").getAbsolutePath());
             fileInputStream = new FileInputStream(filePath);
             XSSFWorkbook sheets = new XSSFWorkbook(fileInputStream);
             //获取sheet
@@ -84,7 +86,7 @@ public class ExcelData {
 
     //测试方法
     public static void main(String[] args) {
-        ExcelData sheet1 = new ExcelData("D:\\code2\\raise\\raise\\src\\main\\resources\\FirstTests.xlsx", "Sheet1");
+        ExcelData sheet1 = new ExcelData("raise\\src\\main\\resources\\FirstTests.xlsx", "Sheet1");
         //获取第二行第4列
         String cell2 = sheet1.getExcelDateByIndex(1, 3);
         //根据第3列值为“customer23”的这一行，来获取该行第2列的值

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" onchange="upload(this)">
+
+<script type="text/javascript">
+    function upload(obj) {
+        var formData = new FormData();
+        formData.append("fileName", obj.files[0]);
+        $.ajax({
+            type: "post",
+            url: "http://localhost:8080/upload",
+            data: formData,
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    }
+</script>
+  
+  
+</body>
+</html>
