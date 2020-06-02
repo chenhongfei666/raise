@@ -108,11 +108,18 @@
             <artifactId>tika-core</artifactId>
             <version>1.24</version>
         </dependency>
-
+        <!-- spring boot web 的 html 支持依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        <!-- thymeleaf使用非严格的html依赖 -->
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.22</version>
+        </dependency>
+
 
 
 

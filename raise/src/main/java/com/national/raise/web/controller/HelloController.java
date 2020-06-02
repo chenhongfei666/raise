@@ -18,9 +18,14 @@ import java.util.HashMap;
 @RestController
 public class HelloController {
 
-    @RequestMapping
+    @RequestMapping("/test2")
     public String hello() {
         return "国奶养育";
+    }
+
+    @RequestMapping("/index")
+    public String index() {
+        return "/index";
     }
 
     @Autowired
